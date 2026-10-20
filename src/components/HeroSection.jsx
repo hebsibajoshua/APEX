@@ -63,6 +63,37 @@ export default function HeroSection() {
             Create professional resumes, optimize for ATS systems, and land your dream job faster.
           </motion.p>
 
+          <motion.div variants={item} className="flex flex-wrap items-center gap-3 mb-8">
+            <button
+              type="button"
+              className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary to-secondary px-5 py-3 text-sm font-semibold text-black shadow-glow transition-transform hover:-translate-y-0.5"
+            >
+              Start for Free
+            </button>
+            <button
+              type="button"
+              className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white/90 transition-colors hover:border-primary/40 hover:bg-white/[0.06]"
+            >
+              View Demo
+            </button>
+          </motion.div>
+
+          <motion.div variants={item} className="mb-8 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 backdrop-blur-sm">
+            <div className="flex -space-x-2">
+              {['JD', 'AM', 'SK'].map((initial) => (
+                <div
+                  key={initial}
+                  className="flex h-8 w-8 items-center justify-center rounded-full border border-black/40 bg-gradient-to-br from-primary to-secondary text-[10px] font-bold text-black"
+                >
+                  {initial}
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-white/80">
+              Trusted by <span className="font-semibold text-white">12k+</span> job seekers
+            </p>
+          </motion.div>
+
           {/* features */}
           <motion.ul variants={item} className="space-y-3">
             {features.map((f) => (
